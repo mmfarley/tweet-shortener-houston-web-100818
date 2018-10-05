@@ -8,14 +8,22 @@ def word_substituter(tweet)
   words = dictionary
   array = tweet.split(" ")
   keys = words.keys
+<<<<<<< HEAD
   array.each_with_index do |word, index|
     keys.each do |key|
       if key == word.downcase
         array[index] = words[key]
+=======
+  array.collect do |word|
+    keys.each do |key|
+      if key == word
+        word = words[key]
+>>>>>>> 3c9df8f0e68e060aaf9a0d8c0b6a2d03eb0f749c
         end
       end
     end
     array.join(" ")
+<<<<<<< HEAD
 end
 
 def bulk_tweet_shortener(tweets)
@@ -40,4 +48,7 @@ def shortened_tweet_truncator(tweet)
     end
     long
     #binding.pry
+=======
+binding.pry
+>>>>>>> 3c9df8f0e68e060aaf9a0d8c0b6a2d03eb0f749c
 end
